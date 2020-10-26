@@ -1,0 +1,15 @@
+official artwork on main page? 
+
+delete function on favorites page
+
+display sprites?
+
+rotate through sprites on :id page?
+
+flex wrap?
+
+add link for more info on favorites page?
+
+look up what like a gameboy color pokedex entry looked like?
+
+use this opportunity to explore bootstrap
