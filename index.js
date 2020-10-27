@@ -11,6 +11,32 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(ejsLayouts);
 
+// -- GET OFFICIAL ARTWORK URLs AND POKEMON ID
+// const picArray = []
+// exports.picArray = picArray
+// const pics = async () => {
+//   // loop through by id?
+//   for (let i = 1; i < 152; i++){
+//       // wait for axios get request to complete
+//       await axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`)
+//       .then(apiResponse => {
+//         const info = {
+//           id: apiResponse.data.id,
+//           picURL: apiResponse.data.sprites.other['official-artwork'].front_default
+//         }
+//         picArray.push(info)
+//       })
+//       .catch(err => {
+//         console.log(err)
+//       })
+//       // push url into array
+//       //remember to access by subtracting 1 from pokemon id on favorites page
+//   }
+//   console.log(picArray)
+// }
+
+// pics()
+
 // GET / - main index of site
 app.get('/', function(req, res) {
   const pokemonUrl = 'http://pokeapi.co/api/v2/pokemon/';

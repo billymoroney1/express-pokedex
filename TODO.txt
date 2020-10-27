@@ -1,15 +1,10 @@
-official artwork on main page? 
 
-delete function on favorites page
+delete button on favorites page
 
-display sprites?
+quickly style favorites page and index
 
-rotate through sprites on :id page?
+why can't i get that font working?
 
-flex wrap?
-
-add link for more info on favorites page?
-
-look up what like a gameboy color pokedex entry looked like?
-
-use this opportunity to explore bootstrap
+need to change database 
+to include the info that i would need to access picURL? 
+i currently am successfully making an array of objects with a pokemons id and artwork

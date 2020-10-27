@@ -1,8 +1,14 @@
+<style>
+    body {
+        background-image: url('');
+        font-size: 22px;
+
+    }
+</style>
+
 <h1>List of Favorite Pokemon</h1>
 
 <% pokemon.forEach(poke=>{ %>
-    <%=poke.dataValues.name%>
-    <%console.log(poke._options.attributes)%>
-    
+    <%=poke.dataValues.name%>    
     <br><br>
 <% }) %> 

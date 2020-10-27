@@ -1,0 +1,68 @@
+<style>
+    @font-face {
+        font-family: 'pokemon';
+        src: url("/fonts/pokemon.ttf") type("ttf");
+    }
+
+    body {
+        height: 100vh;
+        width: 100vw;
+        background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e322af2e-8797-41a0-8ee3-5b4d9ee952bb/d2p22dg-6b408f2d-2b31-4b4a-9994-cd023073aa97.png/v1/fill/w_900,h_563,q_80,strp/pokeball__free_background__by_scribblin_d2p22dg-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NjMiLCJwYXRoIjoiXC9mXC9lMzIyYWYyZS04Nzk3LTQxYTAtOGVlMy01YjRkOWVlOTUyYmJcL2QycDIyZGctNmI0MDhmMmQtMmIzMS00YjRhLTk5OTQtY2QwMjMwNzNhYTk3LnBuZyIsIndpZHRoIjoiPD05MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.YznG0J_R29blMCsQWXAic-pEDD7RoR6nVv-gzdqdJ6c');
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-smooth: never;
+        -webkit-font-smoothing: none;
+    }
+    h2 {
+        font-family: 'pokemon-font', monospace;
+        font-size: 40px;
+        text-align: center;
+    }
+    p {
+        font-family: 'pokemon-font', monospace;
+        font-size: 40px;
+    }
+
+    .container {
+        font-family: 'pokemon-font';
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 800px;
+        height: 800px;
+        color: white;
+        background-color: black;
+    }
+
+    img {
+        width: 800px;
+        height: 800px;
+        margin: -100px;
+    }
+
+    .sub {
+        display: block;
+    }
+</style>
+
+
+<div class='container'>
+    <h2><%= info.name.toUpperCase() %> </h2>
+    <img src=<%=info.sprites.front_default%>><br>
+    <div class='sub'>
+        <p>Height: <%=info.height%> |        
+        Weight: <%=info.weight%><br></p>
+        <p>
+            Types: <%=info.types[0].type.name.toUpperCase()%>
+        </p> 
+        <p>
+            Abilities:<% info.abilities.forEach((skill)=>{ %>
+            <%= skill.ability.name.toUpperCase() %>
+        <% }) %>
+        </p>
+    </div>
+    
+</div>

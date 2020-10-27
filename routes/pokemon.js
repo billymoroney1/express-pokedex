@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models')
 const axios = require('axios')
+//import picture array from index.js
+// const data = require('../index.js')
+// const pics = data.picArray
+
 
 // GET /pokemon - return a page with favorited Pokemon
 router.get('/', function(req, res) {
@@ -16,7 +20,7 @@ router.get('/:id', function(req, res) {
   const pokemonURL = `http://pokeapi.co/api/v2/pokemon/${req.params.id}`
   axios.get(pokemonURL).then(function(apiResponse){
     const apiResults = apiResponse.data
-    res.send(apiResults)
+    res.render('pokemon/show', {info: apiResults})
   })
 })
 
